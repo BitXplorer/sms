@@ -1,4 +1,4 @@
-package com.example.smsdemo;
+package com.example.smsdemo.entity;
 
 import javax.persistence.*;
 
@@ -56,9 +56,6 @@ public class OrderDetails {
         return added;
     }
 
-    public void setAdded(String added) {
-        this.added = added;
-    }
 
     public String getEstimated_delivery() {
         return estimated_delivery;
@@ -84,4 +81,10 @@ public class OrderDetails {
         this.delivered = delivered;
     }
 
+    @Override
+    public String toString() {
+        return String.format(
+                "OrderDetails[order_id_order=%d, added='%s', estimated_delivery='%s', sent='%s', delivered='%s']",
+                order_id_order, added, estimated_delivery, sent, delivered);
+    }
 }

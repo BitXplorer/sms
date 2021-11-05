@@ -1,4 +1,4 @@
-package com.example.smsdemo;
+package com.example.smsdemo.entity;
 
 import java.io.*;
 
